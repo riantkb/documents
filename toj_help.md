@@ -30,7 +30,10 @@ gcc (GCC) 7.3.0
 
 ### コンパイルオプション
 - 以下のコンパイルオプションが用いられます。
-`gcc -O2 -lm -std=gnu89 -Wall -Wvla -Wdeclaration-after-statement`
+
+```
+gcc -O2 -lm -std=gnu89 -Wall -Wvla -Wdeclaration-after-statement
+```
 
 （計算機室の Mac でコンパイルを行う場合、 `gcc` と打つと clang が起動するので、代わりに `gcc-7` とするのをお勧めします）
 
