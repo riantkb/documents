@@ -38,7 +38,11 @@ gcc (GCC) 7.3.0
 gcc -O2 -lm -std=gnu89 -Wall -Wvla -Wdeclaration-after-statement
 ```
 
-（計算機室の Mac でコンパイルを行う場合、 `gcc` と打つと clang が起動するので、代わりに `gcc-7` とするのをお勧めします）
+（計算機室の Mac でコンパイルを行う場合、 `gcc` と打つと clang が起動するので、代わりに以下のコマンドでコンパイルをすることをお勧めします）
+
+```
+gcc-7 -O2 -lm -std=gnu89 -Wall -Wvla -Wdeclaration-after-statement
+```
 
 <br />
 
