@@ -47,9 +47,9 @@ TOJ で AC となったコードに関しても、TA は主に以下の点で再
 - 冒頭に以下のようなコメントがない
   ```c
   /*
-  ex1-3
-  tokodai.t.aa
-  Taro Tokodai
+    ex1-3
+    tokodai.t.aa
+    Taro Tokodai
   */
   ```
 - コメントが足りない
