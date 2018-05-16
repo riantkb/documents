@@ -9,15 +9,16 @@ namespace wavelet
     {
         static void Main()
         {
+            int lev = 10;
             using (Bitmap img = new Bitmap(@"test.jpg"))
             {
                 var format = img.RawFormat;
                 var col = Col.conv(img);
-                var wavelet = Col.transform(col, 4);
+                var wavelet = Col.transform(col, lev);
                 var wl_img = Col.conv(wavelet);
                 wl_img.Save("wavelet.jpg", format);
-                wavelet = Col.threshold(wavelet, 15);
-                var tlansed = Col.inv_transform(wavelet, 4);
+                wavelet = Col.threshold(wavelet, 1);
+                var tlansed = Col.inv_transform(wavelet, lev);
                 var new_img = Col.conv(tlansed);
                 new_img.Save("new_img.jpg", format);
             }
@@ -80,7 +81,7 @@ namespace wavelet
             }
             all.Sort();
             all.Reverse();
-            var th = all[up];
+            var th = up < all.Count ? all[up] : -1;
             var ret = Col.copy(c);
             for (int i = 0; i < c.Length; i++)
             {
